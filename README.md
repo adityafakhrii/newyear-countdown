@@ -1,4 +1,4 @@
-# New Year Countdown dengan Javascript
+# New Year Countdown with Javascript
 
 This repository contains Javascript code to create a simple countdown timer that counts down to the New Year.
 ## Features
