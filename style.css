@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap');
+*{
+	margin: 0;
+	padding: 0;
+	font-family: 'Poppins', sans-serif;
+}
+
+.container{
+	position: relative;
+	width: 100%;
+	height: 100vh;
+	background: #155fea;
+	display: flex;
+}
+
+.container .countdownBx{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	width: 100%;
+}
+
+.container .countdownBx h2{
+	text-align: center;
+	font-size: 1.5em;
+	color: #fff;
+	text-transform: uppercase;
+	letter-spacing: 4px;
+	font-weight: 500;
+	line-height: 4em;
+}
+
+.container .countdownBx h2 span{
+	font-size: 5em;
+	font-weight: 700;
+}
+
+.container .countdownBx h2 span i{
+	font-style: initial;
+	color: #ff0;
+}
+
+.container .countdownBx .countdown{
+	margin-top: 30px;
+	background: rgba(0, 0, 0, 0.1);
+	width: 100%;
+	height: 150px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.container .countdownBx .countdown div{
+	position: relative;
+	width: 100px;
+	text-align: center;
+	color: #fff;
+	font-size: 4.5em;
+	font-weight: 900;
+	margin: 0 15px;
+	margin-top: 30px;
+}
+
+.container .countdownBx .countdown .break{
+	margin-left: 90px;
+}
+
+.container .countdownBx .countdown div:before{
+	content:'text';
+	position: absolute;
+	top: -15px;
+	left: 0;
+	width: 100%;
+	height: 35px;
+	color: #fff;
+	font-size: 0.35em;
+	font-weight: 500;
+	line-height: 35px;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+}
+
+.container .countdownBx .countdown div#date:before{
+	content: 'Tanggal';
+	left: -10px;
+}
+
+.container .countdownBx .countdown div#month:before{
+	content: 'Bulan';
+}
+
+.container .countdownBx .countdown div#year:before{
+	content: 'Tahun';
+	left: 30px;
+}
+
+.container .countdownBx .countdown div#hour:before{
+	content: 'Jam';
+}
+
+.container .countdownBx .countdown div#minute:before{
+	content: 'Menit';
+}
+
+.container .countdownBx .countdown div#second:before{
+	content: 'Detik';
+}
+
+.container .countdownBx .countdown div#second,
+.container .countdownBx .countdown div#second:before{
+	color: #ff0;
+}
+
+@media (max-width: 991px)
+{
+	.container .imgBx{
+		display: none;
+	}
+
+	.container .countdownBx{
+		height: 100%;
+	}
+}
+
+@media (max-width: 600px)
+{
+	.container .countdownBx h2{
+		font-size: 1.1em
+	}
+
+	.container .countdownBx .countdown{
+		height: 100px;
+	}
+
+	.container .countdownBx .countdown div{
+		width: 80px;
+		font-size: 2em;
+		margin: 0;
+		margin-top: -25px;
+	}
+}

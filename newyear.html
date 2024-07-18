@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Countdown New Year</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<div class="container">
+		<div class="imgBx"></div>
+		<div class="countdownBx">
+			<h2>Countdown to New Year<br><span id="year1">20<i>22</i></span></h2>
+			<div class="countdown">
+				<div id="date">NA</div>
+				<div id="month">NA</div>
+				<div id="year">NA</div>
+				<span class="break"></span>
+				<div id="hour">NA</div>
+				<div id="minute">NA</div>
+				<div id="second">NA</div>
+			</div>
+		</div>
+		<div class="socmed">
+			
+		</div>
+	</div>
+
+	<script type="text/javascript">
+		function clock() {
+		var time = new Date(),
+
+		    dates = time.getDate(),
+		    months = time.getMonth()+1,
+		    years = time.getFullYear(),
+		    hours = time.getHours(),
+		    minutes = time.getMinutes(),
+		    seconds = time.getSeconds();
+
+		document.getElementById('date').innerText = harold(dates);
+		document.getElementById('month').innerText = harold(months);
+		document.getElementById('year').innerText = harold(years);
+		document.getElementById('year1').innerText = harold(years);
+		document.getElementById('hour').innerText = harold(hours);
+		document.getElementById('minute').innerText = harold(minutes);
+		document.getElementById('second').innerText = harold(seconds);
+
+		  
+		  function harold(standIn) {
+		    if (standIn < 10) {
+		      standIn = '0' + standIn
+		    }
+		    return standIn;
+		  }
+		}
+		setInterval(clock, 1000);
+	</script>
+</body>
+</html>
